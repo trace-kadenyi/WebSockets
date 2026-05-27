@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function Login({ onSubmit }) {
-  const { username, setUsername } = useState("");
+  const [username, setUsername] = useState("");
   return (
     <>
       <h1>Welcome</h1>
@@ -9,7 +9,7 @@ export function Login({ onSubmit }) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          onsubmit(username);
+          onSubmit(username);
         }}
       >
         <input
