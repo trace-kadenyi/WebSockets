@@ -1,7 +1,7 @@
 import * as React from "react";
 import { usePerfectCursor } from "../hooks/usePerfectCursor";
 
-export function Cursor({ userId, point }) {
+export function Cursor({ userId, point, color }) {
   const rCursor = React.useRef(null);
 
   const animateCursor = React.useCallback((point) => {
@@ -53,7 +53,7 @@ export function Cursor({ userId, point }) {
             width={userId.length * 7 + 8}
             height={14}
             rx={3}
-            fill="green"
+            fill={color}
           />
           <text
             x={2}
