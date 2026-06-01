@@ -24,7 +24,7 @@ export function Cursor({ userId, point }) {
         position: "absolute",
         top: -15,
         left: -15,
-        width: 35,
+        width: 58,
         height: 35,
       }}
       xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export function Cursor({ userId, point }) {
             fontFamily="sans-serif"
             fontWeight="bold"
           >
-            {userId[0]}
+            {userId.length > 4 ? `${userId.slice(0, 4)}...` : userId}
           </text>
         </g>
       )}
